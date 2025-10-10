@@ -1,0 +1,29 @@
+/target
+.git
+.vscode
+.idea
+.DS_Store
+*.swp
+*.log
+node_modules/
+dist/
+.env
+.env.*
+
+.git_backup
+git_users
+docs/FRONTEND_TEST_STRATEGY.md
+
+# Test CSV files
+test_*.csv
+
+# Build artifacts
+Cargo.lock
+package-lock.json
+*.pyc
+__pycache__/
+
+# Temporary and backup files
+*.tmp
+*.bak
+*~
