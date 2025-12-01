@@ -1,0 +1,120 @@
+meta:
+  title: Fleet Management System
+  subtitle: Enterprise Platform for Real-Time Fleet Operations and Optimization
+  author: Engineering Team
+  theme: clean_corporate
+  aspect_ratio: 16:9
+
+slides:
+  - type: title
+    title: Fleet Management System
+    notes: Opening slide establishing project scope and scale
+
+  - type: bullets
+    title: Unified Platform Eliminates Operational Fragmentation
+    bullets:
+      - Integrates vehicle tracking, driver management, maintenance scheduling
+      - Replaces spreadsheets and disconnected tools across operations
+      - Enables data-driven decisions from single source of truth
+      - Supports growth without process scaling
+
+  - type: two_column
+    title: Clean Layered Architecture Enforces Separation of Concerns
+    left:
+      - API Layer handles HTTP and validation
+      - Service Layer contains all business logic
+      - Repository Layer abstracts database access
+      - Unidirectional dependency flow prevents coupling
+    right:
+      - Frontend React + TypeScript + Vite
+      - Backend Rust + Actix-web + SQLx
+      - Database PostgreSQL with partitioning
+      - Caching Redis for real-time status
+
+  - type: bullets
+    title: Eleven Production Services Cover Complete Fleet Lifecycle
+    bullets:
+      - Vehicle Management tracks specs and status
+      - Driver Management enforces license and availability rules
+      - Assignment Service prevents scheduling conflicts
+      - Maintenance Service triggers alerts by mileage or time
+      - Logistics Service routes transport jobs efficiently
+
+  - type: two_column
+    title: Real-Time Telemetry Powers Predictive Insights
+    left:
+      - Vehicle location and speed ingestion
+      - Engine status and anomaly detection
+      - Daily partitioned table prevents bloat
+      - 30-day raw data retention policy
+    right:
+      - Financial Service calculates revenue and costs
+      - Profitability analysis per vehicle per month
+      - Identifies underperforming fleet assets
+      - Guides divestment and acquisition decisions
+
+  - type: bullets
+    title: Automated Maintenance Scheduling Reduces Downtime
+    bullets:
+      - Schedules based on vehicle type, mileage, time interval
+      - Alert system tracks unresolved maintenance needs
+      - Severity levels prioritize critical work
+      - Prevents catastrophic failures via preventive triggers
+
+  - type: bullets
+    title: Type Safety and Compile-Time Validation Prevent Runtime Errors
+    bullets:
+      - Rust guarantees memory safety without garbage collection
+      - SQLx validates SQL queries at compile time
+      - TypeScript frontend eliminates class of JavaScript errors
+      - Generated API client ensures frontend-backend contract
+
+  - type: two_column
+    title: Comprehensive Testing Strategy Ensures Reliability
+    left:
+      - Unit tests for business logic with mocks
+      - Integration tests hit real PostgreSQL database
+      - API tests validate HTTP layer and status codes
+      - Pyramid approach balances speed and coverage
+    right:
+      - 15+ test modules covering all services
+      - Repository tests verify SQL constraints
+      - Service tests validate business rules
+      - Auth tests ensure permission enforcement
+
+  - type: bullets
+    title: Production-Ready Infrastructure Supports Deployment at Scale
+    bullets:
+      - Docker Compose enables local development environment
+      - AWS Fargate deployment for containerized workloads
+      - RDS PostgreSQL with automated backups
+      - GitHub Actions CI/CD validates code before merge
+
+  - type: two_column
+    title: Known Limitations Guide Future Roadmap Prioritization
+    left:
+      - Advanced route optimization beyond simple paths
+      - Mobile driver app still in design phase
+      - SMS notifications not yet implemented
+      - Geofencing features require PostGIS integration
+    right:
+      - Real-time GPS tracking architecture ready for extension
+      - Driver scoring algorithms can add to incentives
+      - Multi-revenue stream management designed but not active
+      - Predictive analytics foundation exists for expansion
+
+  - type: bullets
+    title: Immediate Next Steps Unlock Core Business Value
+    bullets:
+      - User acceptance testing with operations team
+      - Historical data migration from legacy system
+      - Driver app development for assignment notification
+      - Performance testing under realistic load
+
+  - type: bullets
+    title: Platform Scalability Proven Through Design Decisions
+    bullets:
+      - Stateless services scale horizontally
+      - Database partitioning handles growth
+      - Caching layer reduces peak database load
+      - Read replicas available for reporting queries
